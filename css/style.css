@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+    text-align: center;
+    font-size: 15px;
+}
+
+section{
+    padding: 150px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 34px;
+}
+
+.slider::before{
+    background-color: #ffffff;
+    content: "";
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+
+.specs{
+    width: 100%;
+    border-radius: 10px;
+}
+
+hr{
+    margin: 10px 0;
+    height: 2px;
+}
+
+.side-spec{
+    background-color: #ffffff;
+    color: hsl(232, 13%, 33%);
+    padding: 50px;
+}
+
+.side-spec .specs-div{
+    background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.middle-spec{
+    background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 60px 50px;
+    color: #ffffff;
+}
+
+.middle-spec .specs-div{
+    background-color: #ffffff;
+    color: hsl(237, 63%, 64%);
+}
+
+.specs-div{
+    width: 100%;
+    height: 40px;
+}
+
+.side-spec .specs-div:hover{
+    color: hsl(232, 13%, 33%);
+}
+
+.middle-spec .specs-div:hover{
+    color: #ffffff;
+}
+
+.specs-div:hover{
+    background-color: transparent;
+    background-image: none;
+}
+
+@media only screen and (min-width: 550px){
+    section{
+        display: flex;
+    }
+}
