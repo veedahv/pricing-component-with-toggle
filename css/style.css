@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -12,8 +13,9 @@ body{
     font-size: 15px;
 }
 
-section{
-    padding: 150px;
+.span{
+    display: flex;
+    justify-content: center;
 }
 
 .switch{
@@ -27,6 +29,10 @@ section{
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+.switch input:checked ~ .annual{
+    display: none;
 }
 
 .slider{
@@ -47,6 +53,10 @@ section{
     height: 26px;
 }
 
+section{
+    padding: 10px 20px;
+}
+
 .specs{
     width: 100%;
     border-radius: 10px;
@@ -54,35 +64,43 @@ section{
 
 hr{
     margin: 10px 0;
-    height: 2px;
+    height: 1px;
 }
 
 .side-spec{
     background-color: #ffffff;
     color: hsl(232, 13%, 33%);
-    padding: 50px;
+}
+
+.side-spec, .middle-spec{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 40px;
 }
 
 .side-spec .specs-div{
     background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 1px solid hsl(237, 63%, 64%);
+    border-radius: 6px;
 }
 
 .middle-spec{
     background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    padding: 60px 50px;
     color: #ffffff;
 }
 
 .middle-spec .specs-div{
     background-color: #ffffff;
     color: hsl(237, 63%, 64%);
+    border: 1px solid #ffffff;
+    border-radius: 6px;
 }
 
 .specs-div{
     width: 100%;
     height: 40px;
+    align-content: center;
 }
 
 .side-spec .specs-div:hover{
@@ -101,5 +119,24 @@ hr{
 @media only screen and (min-width: 550px){
     section{
         display: flex;
+        padding: 30px 150px;
     }
+
+    .side-spec{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .middle-spec{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-image: linear-gradient(30deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        padding: 90px 50px;
+        color: #ffffff;
+    }
+
+    /* .side-spec{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    } */
 }
